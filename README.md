@@ -11,3 +11,7 @@ A userscript that removes ads from vk.com/feed
 
 ## Usage
 1. You can add your own keywords in `keys` array. IMPORTANT! Please, don't forget to backup your keywords before updating script. I'll try to fix this in a future versions.
+
+## Screenshots
+
+![hidden and shown ad](http://i.piccy.info/i9/84466f8bdb07b61b5c8696e8e133eba5/1483047898/143017/1104307/Image_1.jpg)
