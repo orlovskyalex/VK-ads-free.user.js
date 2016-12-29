@@ -2,6 +2,7 @@
 // @name         VK-ads-free
 // @description  Removes ads from vk.com/feed
 // @version      1.0
+// @updateURL    https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @namespace    orlovskyalex
 // @author       Alex Orlovsky
 // @grant        none
