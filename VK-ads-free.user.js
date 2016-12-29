@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          VK-ads-free
 // @description   Removes ads from vk.com/feed
-// @version       1.2.3
+// @version       1.3
 // @updateURL     https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL   https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source        https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -13,15 +13,18 @@
 // @copyright     2016, Alex Orlovsky (https://github.com/orlovskyalex)
 // ==/UserScript==
 
-window.onload = function () {
+$(document).ready(function () {
+
+    var style = '<link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.style.css">',
+        jquery = '<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>',
+        script = '<script src="https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.script.js"></script>';
+
+    $('head').append(style).append(jquery).append(script);
 
     // this is awful, I know =\
     // wait for a newer version of script
-    var script = '<script>function switchAd (el) {if (el.hasAttribute("style")) {el.removeAttribute("style"); el.previousSibling.childNodes[1].innerHTML = "Hide";} else {el.setAttribute("style", "display: none;"); el.previousSibling.childNodes[1].innerHTML = "Show";}}</script>',
-        showCSS = 'cursor: pointer; display: block; font: 500 13px -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif; margin-top: 10px;',
-        showAd = '<span class="wall_post_more" onclick="switchAd(this.parentElement.nextSibling)" style="'+showCSS+'">Show</span>',
-        adCSS = 'font-family: monospace; padding: 15px 20px 20px;',
-        adWasHere = '<div style="'+adCSS+'">Ad was here, so I blocked it for you. '+showAd+script+'</div>',
+    var showAd = '<span class="vk-ads-free wall_post_more" onclick="switchAd($(this).closest().next())">Show</span>',
+        adWasHere = '<div class="vk-ads-free ad-msg">Ad was here, so I blocked it for you.'+showAd+'</div>',
         // add your keywords to block in this array
         // IMPORTANT! don't forget to backup your keywords before updating script
         keys = ['Читать полностью', 'Результат теста', 'Пoказать пoлностью', 'читать продолжение'];
@@ -33,7 +36,7 @@ window.onload = function () {
     });
 
     // remove ads on feed updates
-    $("#feed_wall").bind("DOMNodeInserted", function (e) {
+    $('#feed_wall').bind('DOMNodeInserted', function (e) {
         var el = e.target;
         if ($(el).hasClass('feed_row')) {
             hideAd(el);
@@ -52,8 +55,8 @@ window.onload = function () {
         if (isAd) {
             var content = $(el).find('.post_info');
             $(adWasHere).insertBefore(content);
-            content.css('display', 'none');
+            content.hide();
         }
     }
 
-};
+});
