@@ -3,7 +3,7 @@
 A userscript that removes ads from vk.com/feed
 
 ## Installation
-1. Install the [Tampermonkey extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+1. Install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) (*for Chrome*) or [Greasemonkey](https://addons.mozilla.org/ru/firefox/addon/greasemonkey/) (*for Firefox*) extension
 2. Go to [script page on OpenUserJS.org](https://openuserjs.org/scripts/orlovskyalex/VK-ads-free)
 3. Click the blue "Install" button
 4. Confirm the installation
