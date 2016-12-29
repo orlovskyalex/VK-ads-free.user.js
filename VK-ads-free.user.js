@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name          VK-ads-free
 // @description   Removes ads from vk.com/feed
-// @version       1.2.1
+// @version       1.2.3
 // @updateURL     https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL   https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
+// @source        https://github.com/orlovskyalex/VK-ads-free.user.js
 // @namespace     orlovskyalex
 // @author        Alex Orlovsky
 // @grant         none
-// @include       *//vk.com/feed*
+// @include       *vk.com/feed*
 // @require       https://code.jquery.com/jquery-3.1.1.min.js
 // @copyright     2016, Alex Orlovsky (https://github.com/orlovskyalex)
 // ==/UserScript==
@@ -17,8 +18,8 @@ window.onload = function () {
     // this is awful, I know =\
     // wait for a newer version of script
     var script = '<script>function switchAd (el) {if (el.hasAttribute("style")) {el.removeAttribute("style"); el.previousSibling.childNodes[1].innerHTML = "Hide";} else {el.setAttribute("style", "display: none;"); el.previousSibling.childNodes[1].innerHTML = "Show";}}</script>',
-        showCSS = 'color: #2a5885; font-weight: 700; text-decoration: underline;',
-        showAd = '<span onclick="switchAd(this.parentElement.nextSibling)" style="'+showCSS+'">Show</span>',
+        showCSS = 'cursor: pointer; display: block; font: 500 13px -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif; margin-top: 10px;',
+        showAd = '<span class="wall_post_more" onclick="switchAd(this.parentElement.nextSibling)" style="'+showCSS+'">Show</span>',
         adCSS = 'font-family: monospace; padding: 15px 20px 20px;',
         adWasHere = '<div style="'+adCSS+'">Ad was here, so I blocked it for you. '+showAd+script+'</div>',
         // add your keywords to block in this array
