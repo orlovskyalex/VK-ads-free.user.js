@@ -1,14 +1,15 @@
 // ==UserScript==
-// @name         VK-ads-free
-// @description  Removes ads from vk.com/feed
-// @version      1.2
-// @updateURL    https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
-// @namespace    orlovskyalex
-// @author       Alex Orlovsky
-// @grant        none
-// @include      *//vk.com/feed*
-// @require      https://code.jquery.com/jquery-3.1.1.min.js
-// @copyright    2016, Alex Orlovsky (https://github.com/orlovskyalex)
+// @name          VK-ads-free
+// @description   Removes ads from vk.com/feed
+// @version       1.2.1
+// @updateURL     https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
+// @downloadURL   https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
+// @namespace     orlovskyalex
+// @author        Alex Orlovsky
+// @grant         none
+// @include       *//vk.com/feed*
+// @require       https://code.jquery.com/jquery-3.1.1.min.js
+// @copyright     2016, Alex Orlovsky (https://github.com/orlovskyalex)
 // ==/UserScript==
 
 window.onload = function () {
