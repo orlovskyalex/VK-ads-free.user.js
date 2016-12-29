@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK-ads-free
 // @description  Removes ads from vk.com/feed
-// @version      1.0
+// @version      1.2
 // @updateURL    https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @namespace    orlovskyalex
 // @author       Alex Orlovsky
@@ -19,11 +19,14 @@ window.onload = function () {
         showCSS = 'color: #2a5885; font-weight: 700; text-decoration: underline;',
         showAd = '<span onclick="switchAd(this.parentElement.nextSibling)" style="'+showCSS+'">Show</span>',
         adCSS = 'font-family: monospace; padding: 15px 20px 20px;',
-        adWasHere = '<div style="'+adCSS+'">Shit was here. '+showAd+script+'</div>';
+        adWasHere = '<div style="'+adCSS+'">Ad was here, so I blocked it for you. '+showAd+script+'</div>',
+        // add your keywords to block in this array
+        // IMPORTANT! don't forget to backup your keywords before updating script
+        keys = ['Читать полностью', 'Результат теста', 'Пoказать пoлностью', 'читать продолжение'];
 
     // remove ads on page load
-    var adPosts = $('.wall_marked_as_ads').closest('.post');
-    adPosts.each(function () {
+    var posts = $('.feed_row');
+    posts.each(function () {
         hideAd(this);
     });
 
@@ -31,16 +34,24 @@ window.onload = function () {
     $("#feed_wall").bind("DOMNodeInserted", function (e) {
         var el = e.target;
         if ($(el).hasClass('feed_row')) {
-            if ($(el).find('.wall_marked_as_ads').length > 0) {
-                hideAd(el);
-            }
+            hideAd(el);
         }
     });
 
     function hideAd (el) {
-        var content = $(el).find('.post_info');
-        $(adWasHere).insertBefore(content);
-        content.css('display', 'none');
+        var isAd = false,
+            sourceText = $(el).find('.wall_post_text').text().toLowerCase();
+        for (var key in keys) {
+            var compareText = keys[key].toLowerCase();
+            if (sourceText.indexOf(compareText) != -1 || $(el).find('.wall_marked_as_ads').length > 0) {
+                isAd = true;
+            }
+        }
+        if (isAd) {
+            var content = $(el).find('.post_info');
+            $(adWasHere).insertBefore(content);
+            content.css('display', 'none');
+        }
     }
 
 };
