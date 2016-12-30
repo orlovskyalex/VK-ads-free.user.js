@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          VK-ads-free
 // @description   Removes ads from vk.com/feed
-// @version       1.3
+// @version       1.3.1
 // @updateURL     https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL   https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source        https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -15,9 +15,9 @@
 
 $(document).ready(function () {
 
-    var style = '<link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.style.css">',
+    var style = '<link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.style.css">',
         jquery = '<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>',
-        script = '<script src="https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.script.js"></script>';
+        script = '<script src="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.script.js"></script>';
 
     $('head').append(style).append(jquery).append(script);
 
