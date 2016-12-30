@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          VK-ads-free
 // @description   Removes ads from vk.com/feed
-// @version       1.3.1
+// @version       1.3.2
 // @updateURL     https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL   https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source        https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     // this is awful, I know =\
     // wait for a newer version of script
-    var showAd = '<span class="vk-ads-free wall_post_more" onclick="switchAd($(this).closest().next())">Show</span>',
+    var showAd = '<span class="vk-ads-free wall_post_more" onclick="switchAd($(this).closest(\'.ad-msg\').next(\'.post_info\'))">Show</span>',
         adWasHere = '<div class="vk-ads-free ad-msg">Ad was here, so I blocked it for you.'+showAd+'</div>',
         // add your keywords to block in this array
         // IMPORTANT! don't forget to backup your keywords before updating script
