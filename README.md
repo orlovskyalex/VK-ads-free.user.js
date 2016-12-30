@@ -16,6 +16,10 @@ A userscript that removes ads from vk.com/feed
 
 ## Usage
 1. You can add your own keywords in `keys` array. IMPORTANT! Please, don't forget to backup your keywords before updating script. I'll try to fix this in a future versions.
+2. You can use my Tampermonkey settings (not necessary)
+  1. Download [settings zip](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
+  2. Go to Tampermonkey utils page (right click on Tampermonkey icon -> Settings -> Utilities)
+  3. Choose zip to import
 
 ## Screenshots
 
