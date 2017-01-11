@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           1.4
+// @version           1.4.1
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -49,6 +49,15 @@ $(document).ready(function () {
 				'overflow': 'hidden'
 			});
 			$(el).find('.wall_text').css('padding-top', '0');
+			if ($(el).find('.copy_quote').length > 0) {
+				$(el).find('.copy_quote').css({
+					'border-left': 'none',
+					'margin': '0',
+					'padding-left': '0'
+				});
+				$(el).find('.copy_post_header').hide();
+				$(el).find('.wall_post_text').css('padding-top', '3px');
+			}
 		}
 	}
 
