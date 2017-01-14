@@ -1,63 +1,107 @@
-# VK-ads-free.user.js
+# VK-ads-free
 
-A userscript that removes ads from VK news feed
+### Пользовательский скрипт, который убирает рекламу из новостной ленты ВК
 
-[Русское описание](https://github.com/orlovskyalex/VK-ads-free.user.js#Русское-описание)
+### [English version](https://github.com/orlovskyalex/VK-ads-free.user.js#english-manual)
 
-## Coming soon
-- normal "Usage" section
-- keywords in a separate file (no need to backup)
+## Функционал
 
-## Installation
-1. Install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) (*for Chrome*) or [Greasemonkey](https://addons.mozilla.org/ru/firefox/addon/greasemonkey/) (*for Firefox*) extension
-2. Go to [script page on OpenUserJS.org](https://openuserjs.org/scripts/orlovskyalex/VK-ads-free)
-3. Click the blue "Install" button
-4. Confirm the installation
-5. Enjoy
+### Первым делом – чтение инструкции
+Именно поэтому после установки скрипт перебрасывает вас обратно на эту страницу. Не поленитесь, пожалуйста, и пройдитесь по инструкции до конца. После этого вы сможете максимально эффективно использовать скрипт.
 
-## Usage
-1. You can add your own keywords in `keys` array. IMPORTANT! Please, don't forget to backup your keywords before updating script. I'll fix this in a future versions.
-2. You can use my Tampermonkey settings (not necessary)
-  1. Download [settings zip](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
-  2. Go to Tampermonkey utils page (click on Tampermonkey icon -> Dashboard -> Utilities)
-  3. Choose zip to import
+### Меню скрипта
+Оно всегда под рукой.
 
-## Screenshots
-Ad in news feed:
+  [![меню](http://imgdisk.ru/images/2017/01/14/Screenshot_14fae8.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_14fae8.png)
 
-![hidden ad](http://i.piccy.info/i9/99e6bae0deab8742294d9787a4ea8ac0/1484129362/46126/1107624/Image_6.png)
+### Автоматическое скрытие рекламных постов
+ВКонтакте заботится о своих пользователях, поэтому некоторые посты сам отмечает как рекламные. Это чтобы нам легче было их скрывать, что я и делаю. Однако и рекламные посты бывают интересными. Для выявления таких интересностей я оставляю часть текста открытой.
 
-After click:
+  [![скрытая реклама](http://imgdisk.ru/images/2017/01/14/Image_6ae5f2.th.png)](http://imgdisk.ru/images/2017/01/14/Image_6ae5f2.png)
 
-![shown ad](http://i.piccy.info/i9/ea9874245b9564bc8b57962c2e38c0b7/1484129382/73535/1107624/Image_2.jpg)
+Заинтересовались?
 
-# Русское описание
+### Кликайте на скрытый пост, чтобы увидеть его содержимое
 
-Пользовательский скрипт, который убирает рекламу из новостной ленты ВК
+  [![показанная реклама](http://imgdisk.ru/images/2017/01/14/Image_2.th.jpg)](http://imgdisk.ru/images/2017/01/14/Image_2.jpg)
 
-## Скоро
-- нормальная инструкция по использованию
-- ключевые слова в отдельном файле
+### Рекламные приложения полностью удаляются из ленты
+А зачем они вам?
+
+  [![рекламные приложения](http://imgdisk.ru/images/2017/01/14/Image_1.th.png)](http://imgdisk.ru/images/2017/01/14/Image_1.png)
+
+А как быть, если рекламный пост не отмечен рекламным и не скрывается?
+
+### Скрытие постов по ключевым словам
+Просто перечислите ключевые слова или фразы через точку с запятой
+
+  [![ключевые слова](http://imgdisk.ru/images/2017/01/14/Screenshot_2.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_2.png)
 
 ## Установка
 1. Установите расширение [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) (*для Chrome*) или [Greasemonkey](https://addons.mozilla.org/ru/firefox/addon/greasemonkey/) (*для Firefox*)
-2. Перейдите на [страницу скрипта на OpenUserJS.org](https://openuserjs.org/scripts/orlovskyalex/VK-ads-free)
-3. Нажмите синюю кнопку "Установить"
-4. Подтвердите установку
-5. Наслаждайтесь
+2. Перейдите на [страницу установки скрипта](https://github.com/orlovskyalex/VK-ads-free.user.js/raw/master/VK-ads-free.user.js)
+3. Установите скрипт
+4. Наслаждайтесь
 
-## Использование
-1. Вы можете добавлять свои собственные ключевые слова в массив `keys`. **ВАЖНО!** Пожалуйста, не забудьте сделать бекап своих ключевых слов перед обновлением скрипта. Я исправлю это в будущих версиях.
-2. Вы можете использовать мои настройки Tampermonkey (не обязательно)
-  1. Скачайте [архив с настройками](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
-  2. Перейдите на страницу Утилиты в Tampermonkey (кликните по иконке Tampermonkey -> Панель -> Утилиты)
-  3. Выберите архив для импорта
+### Вы можете использовать мои настройки Tampermonkey (рекомендуется)
+1. Скачайте [архив с настройками](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
+2. Перейдите на страницу Утилиты в Tampermonkey:
 
-## Скриншоты
-Рекламный пост в ленте:
+  *chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils*
 
-![скрытая реклама](http://i.piccy.info/i9/99e6bae0deab8742294d9787a4ea8ac0/1484129362/46126/1107624/Image_6.png)
+3. Выберите архив для импорта
 
-После клика:
+  [![импорт настроек](http://imgdisk.ru/images/2017/01/14/Screenshot_3.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_3.png)
 
-![показанная реклама](http://i.piccy.info/i9/ea9874245b9564bc8b57962c2e38c0b7/1484129382/73535/1107624/Image_2.jpg)
+# English manual
+
+### A userscript that removes ads from VK news feed
+
+## Features
+
+### Read this manual first
+That's why the script redirects you back to this page. Don't be lazy, please, and read the instruction till the end. After this you'll be able to use the script with maximum efficiency.
+
+### Script menu
+Always handy.
+
+  [![menu](http://imgdisk.ru/images/2017/01/14/Screenshot_14fae8.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_14fae8.png)
+
+### Auto hide advertised posts
+VK cares about its users, so it marks some of the posts as ad to make it easier for us to hide them. And that's what I'm doing. But some ads may be interesting for you, so I keep a couple of lines as a preview.
+
+  [![hidden ad](http://imgdisk.ru/images/2017/01/14/Image_6ae5f2.th.png)](http://imgdisk.ru/images/2017/01/14/Image_6ae5f2.png)
+
+Interested in this ad?
+
+### Click on hidden ad to see its content
+
+  [![shown ad](http://imgdisk.ru/images/2017/01/14/Image_2.th.jpg)](http://imgdisk.ru/images/2017/01/14/Image_2.jpg)
+
+### Advertised applications will be removed completely
+What do you need them for?
+
+  [![advertised applications](http://imgdisk.ru/images/2017/01/14/Image_1.th.png)](http://imgdisk.ru/images/2017/01/14/Image_1.png)
+
+But what should you do if some ad post isn't marked as ad and you can see it?
+
+### Hide posts by keywords
+Just list them separated by semicolon.
+
+  [![keywords](http://imgdisk.ru/images/2017/01/14/Screenshot_2.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_2.png)
+
+## Installation
+1. Install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) (*for Chrome*) or [Greasemonkey](https://addons.mozilla.org/ru/firefox/addon/greasemonkey/) (*for Firefox*) extension
+2. Go to the [script installation page](https://github.com/orlovskyalex/VK-ads-free.user.js/raw/master/VK-ads-free.user.js)
+3. Install the script
+4. Enjoy
+
+### You can use my Tampermonkey settings (recommended)
+1. Download the [settings zip](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
+2. Go to the Tampermonkey Utils page:
+
+  *chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils*
+
+3. Click `Choose File` in the Zip section to import settings
+
+  [![settings import](http://imgdisk.ru/images/2017/01/14/Screenshot_3.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_3.png)
