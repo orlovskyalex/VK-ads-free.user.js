@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           2.0.9
+// @version           2.0.11
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -16,9 +16,9 @@
 $(function () {
 
 	var html = $('html'),
-		keysMenu = $('<a id="top_vk-ads-free_settings_link" class="top_profile_mrow">').text('VK-ads-free'),
+		keysMenu = $('<a id="top_vk-ads-free_settings_link" class="top_profile_mrow">VK-ads-free</a>'),
 		keysForm = $('<div id="keywords_field" contenteditable="true" autofocus="true">'),
-		keysFormLabel = $('<div class="label">').text('Keywords:'),
+		keysFormLabel = '<div class="label">Keywords:</div>',
 		keysSaveBtn = $('<button id="keywords_save_btn" class="flat_button wk_like_wrap _like_wrap">Save</button>'),
 		keysClearBtn = $('<button id="keywords_clear_btn" class="flat_button secondary button_light wl_action_link">Clear</button>'),
 		keysBlock = $('<div id="keywords_wrapper" class="popup_box_container">')
@@ -26,7 +26,8 @@ $(function () {
 			.append($('<div class="box_title_wrap">')
 				.append($('<div class="box_x_button">'))
 				.append($('<div class="box_title">')
-					.text('VK-ads-free 2.0.9')))
+					.append($('<a class="title_link" href="https://github.com/orlovskyalex/VK-ads-free.user.js">VK-ads-free</a>'))
+					.append('2.0.11')))
 			.append($('<div class="box_body box_no_buttons">')
 				.append(keysFormLabel)
 				.append(keysForm)
@@ -40,15 +41,10 @@ $(function () {
 		posts;
 
 	// css
-	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/ffd7ec2b11aaf9dc58a501646236f006ff7f25db/VK-ads-free.style.css">');
+	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/222fe51ef81655fbf8e6e0c43ab0db0b6183e34f/VK-ads-free.style.css">');
 
 	if (!localStorage.getItem('vk-ads-free_menu_opened') || !localStorage.getItem('vk-ads-free_keywords')) {
 		html.addClass('vk-ads-free_guide');
-	}
-
-	if (localStorage.getItem('vk-ads-free_instruction_readed') != '2.0.9') {
-		window.open('https://github.com/orlovskyalex/VK-ads-free.user.js#vk-ads-free', '_blank');
-		localStorage.setItem('vk-ads-free_instruction_readed', '2.0.9');
 	}
 
 	// sets keywords
@@ -67,15 +63,13 @@ $(function () {
 		}
 	});
 
-	keysMenu.insertBefore('#top_logout_link').after($('<div>').addClass('top_profile_sep'));
+	keysMenu.insertBefore('#top_logout_link').after('<div class="top_profile_sep">');
 
-	keysMenu.on('click', function () {
-		keywordsShow();
-	});
+	keysMenu.on('click', keywordsShow);
 
 	keysBlock.on('click', '.box_x_button', keywordsHide);
 
-	$(document).on('mouseup', function (e) {
+	html.on('mouseup', function (e) {
 		if (boxlayer.find('#keywords_wrapper').length && e.target != keysBlock[0] && !keysBlock.has(e.target).length) {
 			keywordsHide();
 		}
