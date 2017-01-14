@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           2.0.8
+// @version           2.0.9
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -26,7 +26,7 @@ $(function () {
 			.append($('<div class="box_title_wrap">')
 				.append($('<div class="box_x_button">'))
 				.append($('<div class="box_title">')
-					.text('VK-ads-free 2.0.8')))
+					.text('VK-ads-free 2.0.9')))
 			.append($('<div class="box_body box_no_buttons">')
 				.append(keysFormLabel)
 				.append(keysForm)
@@ -40,15 +40,15 @@ $(function () {
 		posts;
 
 	// css
-	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/master/VK-ads-free.style.css">');
+	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/ffd7ec2b11aaf9dc58a501646236f006ff7f25db/VK-ads-free.style.css">');
 
 	if (!localStorage.getItem('vk-ads-free_menu_opened') || !localStorage.getItem('vk-ads-free_keywords')) {
 		html.addClass('vk-ads-free_guide');
 	}
 
-	if (localStorage.getItem('vk-ads-free_instruction_readed') != '2.0.8') {
+	if (localStorage.getItem('vk-ads-free_instruction_readed') != '2.0.9') {
 		window.open('https://github.com/orlovskyalex/VK-ads-free.user.js#vk-ads-free', '_blank');
-		localStorage.setItem('vk-ads-free_instruction_readed', '2.0.8');
+		localStorage.setItem('vk-ads-free_instruction_readed', '2.0.9');
 	}
 
 	// sets keywords
