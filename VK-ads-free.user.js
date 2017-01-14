@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           2.0.6
+// @version           2.0.8
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -26,7 +26,7 @@ $(function () {
 			.append($('<div class="box_title_wrap">')
 				.append($('<div class="box_x_button">'))
 				.append($('<div class="box_title">')
-					.text('VK-ads-free 2.0.6')))
+					.text('VK-ads-free 2.0.8')))
 			.append($('<div class="box_body box_no_buttons">')
 				.append(keysFormLabel)
 				.append(keysForm)
@@ -46,9 +46,9 @@ $(function () {
 		html.addClass('vk-ads-free_guide');
 	}
 
-	if (localStorage.getItem('vk-ads-free_instruction_readed') != '2.0.6') {
-		window.open('https://github.com/orlovskyalex/VK-ads-free.user.js#Функционал', '_blank');
-		localStorage.setItem('vk-ads-free_instruction_readed', '2.0.6');
+	if (localStorage.getItem('vk-ads-free_instruction_readed') != '2.0.8') {
+		window.open('https://github.com/orlovskyalex/VK-ads-free.user.js#vk-ads-free', '_blank');
+		localStorage.setItem('vk-ads-free_instruction_readed', '2.0.8');
 	}
 
 	// sets keywords

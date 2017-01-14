@@ -19,7 +19,7 @@
 	margin-right: 10px;
 }
 
-.post_marked_as_ads {
+.wall_module .post.post_marked_as_ads {
 	max-height: 42px;
 	overflow: hidden;
 }
