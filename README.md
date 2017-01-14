@@ -7,7 +7,7 @@
 ## Функционал
 
 ### Первым делом – чтение инструкции
-Именно поэтому после установки скрипт перебрасывает вас обратно на эту страницу. Не поленитесь, пожалуйста, и пройдитесь по инструкции до конца. После этого вы сможете максимально эффективно использовать скрипт.
+Не поленитесь, пожалуйста, и пройдитесь по инструкции до конца. После этого вы сможете максимально эффективно использовать скрипт.
 
 ### Меню скрипта
 Оно всегда под рукой.
@@ -43,6 +43,12 @@
 3. Установите скрипт
 4. Наслаждайтесь
 
+### Обновление
+- Tampermonkey по умолчанию автоматически проверяет обновления раз в день
+- Можно проверить обновления вручную, кликнув по времени последнего обновления
+
+[![ручное обновление](http://imgdisk.ru/images/2017/01/14/Screenshot_17196f.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_17196f.png)
+
 ### Вы можете использовать мои настройки Tampermonkey (рекомендуется)
 1. Скачайте [архив с настройками](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
 2. Перейдите на страницу Утилиты в Tampermonkey:
@@ -53,6 +59,14 @@
 
   [![импорт настроек](http://imgdisk.ru/images/2017/01/14/Screenshot_3.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_3.png)
 
+## Нашли баг или считаете, что скрипт можно улучшить?
+1. Первым делом проверьте обновления: возможно, я уже всё сделал.
+2. Если вопрос остаётся открытым, пожалуйста, дайте мне знать:
+  - [github](https://github.com/orlovskyalex/VK-ads-free.user.js/issues)
+  - [личные сообщения ВКонтакте](https://vk.me/alex_orlovsky)
+  - [мессенджер Фейсбука](https://m.me/alex.orlovsky.zp)
+  - Viber/WhatsApp: +380932842874
+
 # English manual
 
 ### A userscript that removes ads from VK news feed
@@ -60,7 +74,7 @@
 ## Features
 
 ### Read this manual first
-That's why the script redirects you back to this page. Don't be lazy, please, and read the instruction till the end. After this you'll be able to use the script with maximum efficiency.
+Don't be lazy, please, and read the instruction till the end. After this you'll be able to use the script with maximum efficiency.
 
 ### Script menu
 Always handy.
@@ -96,6 +110,12 @@ Just list them separated by semicolon.
 3. Install the script
 4. Enjoy
 
+### Updating
+- Tampermonkey checks for updates daily by default
+- You can manually check for updates by clicking on the time of the last update
+
+[![manually updating](http://imgdisk.ru/images/2017/01/14/Screenshot_17196f.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_17196f.png)
+
 ### You can use my Tampermonkey settings (recommended)
 1. Download the [settings zip](https://raw.githubusercontent.com/orlovskyalex/VK-ads-free.user.js/master/tampermonkey_settings.zip)
 2. Go to the Tampermonkey Utils page:
@@ -105,3 +125,11 @@ Just list them separated by semicolon.
 3. Click `Choose File` in the Zip section to import settings
 
   [![settings import](http://imgdisk.ru/images/2017/01/14/Screenshot_3.th.png)](http://imgdisk.ru/images/2017/01/14/Screenshot_3.png)
+
+## Found a bug or think that the script can be improved?
+1. Check for updates first, perhaps I've already done that.
+2. If the question remains open, please let me know via:
+  - [github](https://github.com/orlovskyalex/VK-ads-free.user.js/issues)
+  - [VK messages](https://vk.me/alex_orlovsky)
+  - [Facebook Messenger](https://m.me/alex.orlovsky.zp)
+  - Viber/WhatsApp: +380932842874
