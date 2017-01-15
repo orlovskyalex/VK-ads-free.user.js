@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           2.0.11
+// @version           2.0.12
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -26,8 +26,8 @@ $(function () {
 			.append($('<div class="box_title_wrap">')
 				.append($('<div class="box_x_button">'))
 				.append($('<div class="box_title">')
-					.append($('<a class="title_link" href="https://github.com/orlovskyalex/VK-ads-free.user.js">VK-ads-free</a>'))
-					.append('2.0.11')))
+					.append($('<a class="title_link" href="https://github.com/orlovskyalex/VK-ads-free.user.js" target="_blank">VK-ads-free</a>'))
+					.append('2.0.12')))
 			.append($('<div class="box_body box_no_buttons">')
 				.append(keysFormLabel)
 				.append(keysForm)
@@ -70,7 +70,7 @@ $(function () {
 	keysBlock.on('click', '.box_x_button', keywordsHide);
 
 	html.on('mouseup', function (e) {
-		if (boxlayer.find('#keywords_wrapper').length && e.target != keysBlock[0] && !keysBlock.has(e.target).length) {
+		if (boxlayer.find('#keywords_wrapper').length && e.target != keysBlock && !keysBlock.has(e.target).length) {
 			keywordsHide();
 		}
 	});
@@ -89,7 +89,6 @@ $(function () {
 		}
 		keysForm.focus();
 		keywordsDo();
-		return false;
 	}
 
 	function keywordsHide() {
