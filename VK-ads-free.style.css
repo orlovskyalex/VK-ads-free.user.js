@@ -1,18 +1,21 @@
 #keywords_field {
 	box-sizing: border-box;
-	margin-bottom: 20px;
 	min-height: 150px;
 	padding: 10px;
 	width: 100%;
 }
 
-#keywords_wrapper {
+#vk-ads-free_menu {
 	margin-top: 5%;
 	width: 35%;
 }
 
-#keywords_wrapper .label {
+#vk-ads-free_menu .label {
 	font-size: 14px;
+}
+
+.buttons_wrap {
+	margin-top: 20px;
 }
 
 #keywords_save_btn {
