@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              VK-ads-free
 // @description       Removes ads from vk.com/feed
-// @version           2.1.1
+// @version           2.2.1
 // @updateURL         https://openuserjs.org/meta/orlovskyalex/VK-ads-free.meta.js
 // @downloadURL       https://openuserjs.org/src/scripts/orlovskyalex/VK-ads-free.user.js
 // @source            https://github.com/orlovskyalex/VK-ads-free.user.js
@@ -23,7 +23,7 @@ var $keywords_field = $('<div id="keywords_field" contenteditable="true" autofoc
 			.append($('<div class="box_x_button">'))
 			.append($('<div class="box_title">')
 				.append($script_link)
-				.append('2.1.1')))
+				.append('2.2.1')))
 		.append($('<div class="box_body box_no_buttons">')
 			.append('<div>Keywords:</div>')
 			.append($keywords_field)
@@ -45,7 +45,7 @@ $(function () {
 	$box_layer = $('#box_layer');
 
 	// css
-	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/e306c7cd9402623f85b67ef857fcf8b12eb189a4/VK-ads-free.style.css">');
+	$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/orlovskyalex/VK-ads-free.user.js/b0c8428a0f165f8bf27332c1170a6be519bc2a14/VK-ads-free.style.min.css">');
 
 	// show guide arrow
 	if (!localStorage.getItem('vk-ads-free_keywords')) {
